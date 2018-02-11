@@ -1,0 +1,121 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Home_old.master.vb" Inherits="PT_MASTER.Home_old" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>PARKTECH</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="css/home_master.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+      <table align="center" class="auto-style2">
+            <tr style="background-color:#111">
+                <td style="background-color:#111;" class="auto-style1">
+                <img src="image/PT_logo.jpg" style="width:100%; height:100%">    
+                </td>
+                <td>
+                    <ul> 
+                         <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">เมนูหลัก</a>
+                            <div class="dropdown-content">
+                              <a href="#">ค้นหารถในระบบ</a>
+                              <a href="#">ค้นหารถในระบบตู้อัตโนมัติ</a>
+                              <a href="#">รถที่ยังไม่ออกจากระบบ</a>
+                                 <a href="#">จัดการบัตรจอดรถ</a>
+                                 <a href="#">ส่งข้อมูลไปยังตู้ทำรายการ</a>
+                                 <a href="#">สถานะตู้ทำรายการ</a>
+                            </div>
+                           </li>
+
+                         <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">บัตรจอดรถ</a>
+                            <div class="dropdown-content">
+                              <a href="#">ลงทะเบียนบัตร</a>
+                              <a href="#">การจัดการบัตรจอดรถ</a>
+                              <a href="#">ตรวจสอบบัตร</a>
+                              <a href="#">จัดการทะเบียนรถ VISITOR VIP</a>
+                              <a href="#">จัดการวันที่อนุญาตให้ VISITOR VIP เข้าทำการ</a>
+                              <a href="#">จัดการวันที่รถติด BACK LIST</a>
+                              <a href="#">จัดการทะเบียนรถติด BACK LIST</a>
+                            </div>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">ข้อมูลสมาชิก</a>
+                            <div class="dropdown-content">
+                              <a href="#">ข้อมูลบริษัท/ผู้เช่า</a>
+                              <a href="#">ประเภทสมาชิก</a>
+                              <a href="#">จัดการข้อมูลสมาชิก</a>
+                              <a href="#">ต่ออายุสมาชิก</a>
+                              <a href="#">ข้อความเตือนสมาชิกห้ามจอด</a>
+                            </div>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">การเงิน</a>
+                            <div class="dropdown-content">
+                              <a href="#">เช็ครายการผลัดซ้ำ</a>
+                              <a href="#">ใบเสร็จรับเงิน/ใบกำกับภาษี</a>
+                              <a href="#">รายได้จากเครื่องคิดเงิน</a>
+                                <a href="#">อัตราค่าจอดรถ</a>
+                            </div>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">ESTAMP</a>
+                            <div class="dropdown-content">
+                              <a href="#">การจัดการผู้ใช้งานE-Stamp</a>
+                              <a href="#">การจัดการStationE-STAMP</a>
+                            </div>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">รายงานระบบ</a>
+                            <div class="dropdown-content">
+                              <a href="#">รายงานการตรวจสอบ</a>
+                              <a href="#">รายงานบัตรจอดรถ</a>
+                              <a href="#">รายงานสมาชิก</a>
+                              <a href="#">รายงานการเงิน</a>
+                              <a href="#">รายงานภาษี</a>
+                              <a href="#">รายงานE-Stamp</a>
+                              <a href="#">รายงานกราฟ</a>
+                              <a href="#">รายงานเพิ่มเติม</a>
+                            </div>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">เครื่องมือผู้ดูแลระบบ</a>
+                            <div class="dropdown-content">
+                              <a href="#">ข้อความพนักงานผู้ทำรายการ</a>
+                              <a href="#">ข้อความของผู้มาติดต่อ</a>
+                              <a href="#">เงื่อนไขเปิดไม้กั้นฉุกเฉิน</a>
+                              <a href="#">การจัดการข้อความเครื่องทำรายการ</a>
+                              <a href="#">สถานประกอบการ</a>
+                              <a href="#">ตู้ทำรายการ</a>
+                            </div>
+                           </li>
+                    </ul>
+                </td>
+                <%-- End Top Menu --%>
+            </tr>
+            <tr>
+                <td colspan="2">
+                     
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                     
+                </td>
+            </tr>
+            <tr style="background-color:#111; color:#ffd800;">
+                <td class="auto-style1" colspan="2"><center><h5>PARKTECH INNOVATION Co.,Ltd. &copy;2018</h5></center></td>
+            </tr>
+        </table> 
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,169 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Home.master.vb" Inherits="PT_MASTER.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Parktech Innovations Co.,Ltd.</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+    <style type="text/css">
+      footer {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 1rem;
+          background-color: #000000;
+          text-align: center;
+          color:#e5bc35;
+    }
+   .navbar-brand{
+       color:#e5bc35;
+   }
+    </style>
+
+       
+<%--datetimepicker--%>
+<script src="scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.dynDateTime.min.js" type="text/javascript"></script>
+<script src="scripts/calendar-en.min.js" type="text/javascript"></script>
+<link href="styles/calendar-blue.css" rel="stylesheet" type="text/css" />
+<script type = "text/javascript">
+    $(document).ready(function () {
+        $(".Calender").dynDateTime({
+            showsTime: true,
+            ifFormat: "%Y/%m/%d %H:%M:%S",
+            daFormat: "%l;%M %p, %e %m, %Y",
+            align: "BR",
+            electric: false,
+            singleClick: false,
+            displayArea: ".siblings('.dtcDisplayArea')",
+            button: ".next()"
+        });
+    });
+</script>
+<%--datetimepicker--%>
+
+</head>
+<body style="background-color:#7e7b7b; opacity:0.8; filter: alpha(opacity=80);">
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Parktech Innovation Co.,Ltd.</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Home_master(0) %><%--เมนูหลัก--%><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="Defult.aspx">หน้าหลัก</a></li>
+                              <li><a href="frmParking_Car_Finding.aspx"><%=Home_master(1) %> <%--ค้นหารถในระบบ--%></a></li>
+                              <li><a href="#"><%=Home_master(2) %><%--รถที่ยังไม่ออกจากระบบ--%></a></li>
+                                 <li><a href="#"><%=Home_master(3)%><%--จัดการบัตรจอดรถ--%></a></li>
+                                 <li><a href="#"><%=Home_master(4)%><%--ส่งข้อมูลไปยังตู้ทำรายการ--%></a></li>
+                                 <li><a href="frm_Status_Terminal.aspx"><%=Home_master(5)%><%--สถานะตู้ทำรายการ--%></a></li>
+                            </ul>
+                           </li>
+
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Home_master(13) %> <%--บัตรจอดรถ--%><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#"><%=Home_master(6) %> <%--ลงทะเบียนบัตร--%></a></li>
+                              <li><a href="#"><%=Home_master(7) %> <%--การจัดการบัตรจอดรถ--%></a></li>
+                              <li><a href="#"><%=Home_master(8) %> <%--ตรวจสอบบัตร--%></a></li>
+                              <li><a href="#"><%=Home_master(9) %> <%--จัดการทะเบียนรถ VISITOR VIP--%></a></li>
+                              <li><a href="#"><%=Home_master(10) %> <%--จัดการวันที่อนุญาตให้ VISITOR VIP เข้าทำการ--%></a></li>
+                              <li><a href="#"><%=Home_master(11) %> <%--จัดการวันที่รถติด BACK LIST--%></a></li>
+                              <li><a href="#"><%=Home_master(12) %> <%--จัดการทะเบียนรถติด BACK LIST--%></a></li>
+                            </ul>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Home_master(14) %> <%--ข้อมูลสมาชิก--%><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="frmEStamp_Leasee.aspx"><%=Home_master(15) %> <%--ข้อมูลบริษัท/ผู้เช่า--%></a></li>
+                              <li><a href="frmMember_Type.aspx"><%=Home_master(16) %> <%--ประเภทสมาชิก--%></a></li>
+                              <li><a href="frm_Member_Manage.aspx"><%=Home_master(17) %> <%--จัดการข้อมูลสมาชิก--%></a></li>
+                              <li><a href="#"><%=Home_master(18) %> <%--ต่ออายุสมาชิก--%></a></li>
+                              <li><a href="#"><%=Home_master(19) %> <%--ข้อความเตือนสมาชิกห้ามจอด--%></a></li>
+                            </ul>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Home_master(20) %> <%--การเงิน--%><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#"><%=Home_master(21) %> <%--เช็ครายการผลัดซ้ำ--%></a></li>
+                              <li><a href="#"><%=Home_master(22) %> <%--ใบเสร็จรับเงิน/ใบกำกับภาษี--%></a></li>
+                              <li><a href="#"><%=Home_master(23) %> <%--รายได้จากเครื่องคิดเงิน--%></a></li>
+                                <li><a href="frmRate_Normal.aspx"><%=Home_master(24) %> <%--อัตราค่าจอดรถ--%></a></li>
+                            </ul>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Home_master(25) %> <%--ESTAMP--%><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="frm_User_E_Stamp.aspx"><%=Home_master(26) %> <%--การจัดการผู้ใช้งานE-Stamp--%></a></li>
+                              <li><a href="frm_Mas_Station_Estamp.aspx"><%=Home_master(27) %> <%--การจัดการStationE-STAMP--%></a></li>
+                            </ul>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Home_master(28) %> <%--รายงานระบบ--%><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li class="dropdown"><a href="Report_List.aspx?report_id=1"><%=Home_master(29) %> <%--รายงานการตรวจสอบ--%></a></li>
+                              <li><a href="Report_List.aspx?report_id=2"><%=Home_master(30) %> <%--รายงานบัตรจอดรถ--%></a></li>
+                                <li><a href="Report_List.aspx?report_id=3"><%=Home_master(31) %> <%--รายงานสมาชิก--%></a></li>
+                               <li><a href="Report_List.aspx?report_id=4"><%=Home_master(47) %> <%--รายงานการเข้าออก--%></a></li>
+                                <li><a href="Report_List.aspx?report_id=5"><%=Home_master(32) %> <%--รายงานการเงิน--%></a></li>
+                              <li><a href="Report_List.aspx?report_id=6"><%=Home_master(33) %> <%--รายงานภาษี--%></a></li>
+                              <li><a href="Report_List.aspx?report_id=7"><%=Home_master(34) %> <%--รายงานE-Stamp--%></a></li>
+                              <li><a href="Report_List.aspx?report_id=8"><%=Home_master(35) %> <%--รายงานกราฟ--%></a></li>
+                              <li><a href="Report_List.aspx?report_id=9"><%=Home_master(36) %> <%--รายงานเพิ่มเติม--%></a></li>
+                            </ul>
+                           </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Home_master(37) %> <%--เครื่องมือผู้ดูแลระบบ--%><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#"><%=Home_master(38) %> <%--ข้อความพนักงานผู้ทำรายการ--%></a></li>
+                              <li><a href="#"><%=Home_master(39) %> <%--ข้อความของผู้มาติดต่อ--%></a></li>
+                              <li><a href="frm_Mas_Open_BAR.aspx"><%=Home_master(40) %> <%--เงื่อนไขเปิดไม้กั้นฉุกเฉิน--%></a></li>
+                              <li><a href="#"><%=Home_master(41) %> <%--การจัดการข้อความเครื่องทำรายการ--%></a></li>
+                              <li><a href="frmStation_Company.aspx"><%=Home_master(42) %> <%--สถานประกอบการ--%></a></li>
+                              <li><a href="frm_Manage_Terminal.aspx"><%=Home_master(43) %> <%--ตู้ทำรายการ--%></a></li>
+                                <li><a href="frmUser.aspx"><%=Home_master(48) %> <%--จัดการข้อมูลผู้ใช้งาน--%></a></li>
+                            </ul>
+                           </li>
+          
+          <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%=Session("cur_username") %> <%--ผู้ใช้งาน--%><span class="caret"></span></a>
+           <ul class="dropdown-menu">
+                              <li><a href="frm_User_detail_edit.aspx"><%=Home_master(45) %> <%--ข้อมูลผู้ใช้งาน--%></a></li>
+                              <li><a href="logout.aspx"><%=Home_master(44) %> <%--ออกจากระบบ--%></a></li>
+                            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+</asp:ContentPlaceHolder>
+</div>
+    </form>
+</body>
+</html>
